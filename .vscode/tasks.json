@@ -53,7 +53,7 @@
             "dependsOn": "fmt"
         },
         {
-            "label": "pylint",
+            "label": "lint",
             "type": "shell",
             "command": "${workspaceFolder}/venv/bin/python3 -m pylint src",
             "problemMatcher": [],
