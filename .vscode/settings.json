@@ -1,7 +1,7 @@
 {
     "terminal.integrated.env.linux": {
         "VIRTUAL_ENV": "${workspaceFolder}/.venv",
-        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}:/home/py3/.bun/bin"
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
     },
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.profiles.linux": {
