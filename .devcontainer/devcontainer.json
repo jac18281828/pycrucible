@@ -12,7 +12,7 @@
 		"UV_LINK_MODE": "copy",
 		"UV_PROJECT_ENVIRONMENT": "/home/py3/.venv"
 	},
-	"postCreateCommand": "cat ${containerWorkspaceFolder}/.devcontainer/setup-vscode-path.sh >> ~/.bashrc",
+	"postCreateCommand": "cat ${containerWorkspaceFolder}/.devcontainer/setup-vscode-path.sh >> ~/.bashrc && uv sync",
 	"customizations": {
 		"vscode": {
 			"settings": {
