@@ -8,9 +8,16 @@
 		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 		"dockerfile": "../Dockerfile"
 	},
+	"containerEnv": {
+		"UV_LINK_MODE": "copy",
+		"UV_PROJECT_ENVIRONMENT": "/home/py3/.venv"
+	},
 	"postCreateCommand": "cat ${containerWorkspaceFolder}/.devcontainer/setup-vscode-path.sh >> ~/.bashrc",
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/home/py3/.venv/bin/python"
+			},
 			"extensions": [
 				"fill-labs.dependi",
 				"ms-python.black-formatter",
