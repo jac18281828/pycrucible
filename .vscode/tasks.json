@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "venv",
+            "label": "sync",
             "type": "shell",
-            "command": "${workspaceFolder}/venv/bin/activate",
+            "command": "uv sync",
             "group": {
                 "kind": "build",
                 "isDefault": false
@@ -14,18 +14,9 @@
             "problemMatcher": []
         },
         {
-            "label": "requirements",
-            "type": "shell",
-            "command": "${workspaceFolder}/venv/bin/pip3 install -r requirements.txt -r requirements-dev.txt",
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            },
-        },
-        {
             "label": "isort",
             "type": "shell",
-            "command": "${workspaceFolder}/venv/bin/isort --check src",
+            "command": "uv run isort --check src",
             "group": {
                 "kind": "build",
                 "isDefault": false
@@ -35,7 +26,7 @@
         {
             "label": "fmt",
             "type": "shell",
-            "command": "${workspaceFolder}/venv/bin/black --check src",
+            "command": "uv run black --check src",
             "group": {
                 "kind": "build",
                 "isDefault": false
@@ -45,7 +36,7 @@
         {
             "label": "mypy",
             "type": "shell",
-            "command": "${workspaceFolder}/venv/bin/python3 -m mypy src",
+            "command": "uv run python -m mypy src",
             "group": {
                 "kind": "build",
                 "isDefault": false
@@ -55,7 +46,7 @@
         {
             "label": "lint",
             "type": "shell",
-            "command": "${workspaceFolder}/venv/bin/python3 -m pylint src",
+            "command": "uv run python -m pylint src",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -71,7 +62,7 @@
         {
             "label": "test",
             "type": "shell",
-            "command": "${workspaceFolder}/venv/bin/python3 -m unittest discover -s test",
+            "command": "uv run python -m unittest discover -s test",
             "group": {
                 "kind": "test",
                 "isDefault": true

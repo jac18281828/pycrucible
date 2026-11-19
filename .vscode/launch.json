@@ -9,7 +9,7 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "env": {
-                "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}/venv/lib/python3.11/site-packages"
+                "PYTHONPATH": "${workspaceFolder}/src"
             }
         }
     ]
